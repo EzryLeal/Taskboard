@@ -1,3 +1,58 @@
+# 🧠 TaskBoard con React y Redux Toolkit
+
+Proyecto desarrollado como parte de la Evaluación Parcial II del curso de Programación Web en la Universidad Da Vinci.
+
+## 📦 Instalación y configuración inicial
+
+```powershell
+cd C:\Users\leale
+npx create-react-app taskboard
+cd taskboard
+npm install @reduxjs/toolkit react-redux
+code .
+
+#  Estructura del proyecto
+⚠️ Durante la instalación se muestran advertencias sobre paquetes obsoletos. Se recomienda revisar react.dev/link/cra para alternativas más modernas.
+src/
+├── components/
+│   ├── TaskForm.jsx
+│   ├── TaskItem.jsx
+│   └── TaskList.jsx
+├── redux/
+│   ├── actions.js
+│   ├── reducer.js
+│   └── store.js
+├── App.jsx
+├── index.js
+
+## Cuestionario 
+
+1. Explica brevemente qué es Redux y cuál es su principal ventaja frente al uso de useState.  
+Redux es una biblioteca la cual sirve para manejar el estado global de una aplicación, especialmente en 
+React. La principal ventaja frente a useState es permitir la centralización de todo el estado en un solo 
+lugar, lo cual evita que se tenga que pasar datos entre muchos componentes (Porps), así se puede 
+facilitar el control, la organización y la escalabilidad de un proyecto. 
+2. Menciona los tres componentes fundamentales de Redux y su función.  
+Los componentes fundamentales serian: Store, el cual se donde se guardan todos los estados de una 
+aplicación. Actions son los objetos que describen los tipos de cambios que se requieren hacer en el 
+estado. Reducers son las funciones que reciben las acciones y actualizan el estado según lo que se haya 
+pedido. 
+3. ¿Qué papel cumple el reducer dentro del flujo de Redux?  
+El reducer es el encargado de modificar el estado, así como de recibir la acción que se despachó, es 
+decir que este agrega o elimina una tarea, y así devuelve un nuevo estado actualizado, siendo como el 
+“cerebro” que decide qué hacer con cada acción. 
+4. ¿Qué diferencia hay entre una acción síncrona y una acción asíncrona en Redux Toolkit? 
+La acción síncrona es la que se ejecuta inmediatamente y cambia el estado local sin esperar nada 
+externo. Poro la acción asíncrona es la que se utiliza cuando hay que esperar una respuesta de un 
+servidor o API. Redux Toolkit logra manejar con CreateAsyncThunk el cual permite controlar estados de 
+carga, éxito y error es decir pending, fulfilled y rejected. 
+
+Link Video  
+https://www.youtube.com/watch?v=lPCypElxqiI
+
+
+Dentro de la carpeta src/ se crean las siguientes subcarpetas y archivos:
+
 # Primeros pasos con Create React App
 
 Este proyecto se creó con [Create React App](https://github.com/facebook/create-react-app).
